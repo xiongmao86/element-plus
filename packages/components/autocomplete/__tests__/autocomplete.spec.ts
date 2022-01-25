@@ -4,7 +4,7 @@ import { sleep } from '@element-plus/test-utils'
 
 import Autocomplete from '../src/index.vue'
 
-jest.unmock('lodash/debounce')
+jest.unmock('lodash')
 
 const _mount = (payload = {}) =>
   mount({
