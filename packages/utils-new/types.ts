@@ -10,7 +10,6 @@ import {
   toRawType,
 } from '@vue/shared'
 import { isBoolean, isNumber } from '@vueuse/core'
-import type { Mutable } from './typescript'
 
 export {
   isArray,

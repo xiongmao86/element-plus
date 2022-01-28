@@ -73,7 +73,7 @@ export function isValidElementNode(node: unknown): node is VNode {
 function getChildren(
   node: VNodeNormalizedChildren | VNodeChild,
   depth: number
-): undefined | VNodeNormalizedChildren | VNodeChild {
+): VNodeNormalizedChildren | VNodeChild {
   if (isComment(node)) return
   if (isFragment(node) || isTemplate(node)) {
     return depth > 0 ? getFirstValidNode(node.children, depth - 1) : undefined
@@ -84,7 +84,7 @@ function getChildren(
 export const getFirstValidNode = (
   nodes: VNodeNormalizedChildren,
   maxDepth = 3
-): ReturnType<typeof getChildren> => {
+) => {
   if (Array.isArray(nodes)) {
     return getChildren(nodes[0], maxDepth)
   } else {
@@ -100,8 +100,7 @@ export function renderIf(
 }
 
 export function renderBlock(...args: Parameters<typeof createBlock>) {
-  openBlock()
-  return createBlock(...args)
+  return openBlock(), createBlock(...args)
 }
 
 export const getNormalizedProps = (node: VNode) => {
