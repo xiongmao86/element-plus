@@ -16,7 +16,7 @@ import { UPDATE_MODEL_EVENT, CHANGE_EVENT } from '@element-plus/constants'
 import { EVENT_CODE } from '@element-plus/utils/aria'
 import { useLocale, useSize } from '@element-plus/hooks'
 import scrollIntoView from '@element-plus/utils/scroll-into-view'
-import { isKorean } from '@element-plus/utils/isDef'
+import { isKorean } from '@element-plus/utils-new'
 import { getValueByPath } from '@element-plus/utils/util'
 import { elFormKey, elFormItemKey } from '@element-plus/tokens'
 

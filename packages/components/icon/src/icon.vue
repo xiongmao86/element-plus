@@ -6,8 +6,7 @@
 
 <script lang="ts">
 import { defineComponent, computed } from 'vue'
-import { isUndefined } from '@element-plus/utils-new'
-import { addUnit } from '@element-plus/utils/util'
+import { isUndefined, addUnit } from '@element-plus/utils-new'
 import { useNamespace } from '@element-plus/hooks'
 import { iconProps } from './icon'
 

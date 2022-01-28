@@ -19,8 +19,7 @@
 import { defineComponent, computed, ref, watch } from 'vue'
 import { ElIcon } from '@element-plus/components/icon'
 import { useNamespace } from '@element-plus/hooks'
-import { isNumber, isString } from '@element-plus/utils-new'
-import { addUnit } from '@element-plus/utils/util'
+import { isNumber, isString, addUnit } from '@element-plus/utils-new'
 import { avatarEmits, avatarProps } from './avatar'
 
 import type { CSSProperties } from 'vue'

@@ -1,9 +1,8 @@
-import { extend, hasOwn, isString, isFunction, looseEqual } from '@vue/shared'
+import { extend, hasOwn, isFunction, looseEqual } from '@vue/shared'
 import isEqualWith from 'lodash/isEqualWith'
-import { debugWarn, throwError, isNumber } from '@element-plus/utils-new'
-
+import { isNumber, throwError } from '@element-plus/utils-new'
 import type { ComponentPublicInstance, CSSProperties, Ref } from 'vue'
-import type { TimeoutHandle, Nullable } from './types'
+import type { Nullable } from './types'
 
 const SCOPE = 'Util'
 
@@ -120,8 +119,8 @@ export function rafThrottle<T extends (...args: any) => any>(fn: T): T {
   } as T
 }
 
-export const clearTimer = (timer: Ref<TimeoutHandle>) => {
-  clearTimeout(timer.value)
+export const clearTimer = (timer: Ref<Nullable<number>>) => {
+  if (isNumber(timer.value)) clearTimeout(timer.value)
   timer.value = null
 }
 
@@ -130,20 +129,6 @@ export function arrayFlat(arr: unknown[]) {
     const val = Array.isArray(item) ? arrayFlat(item) : item
     return acm.concat(val)
   }, [])
-}
-
-export function deduplicate<T>(arr: T[]) {
-  return Array.from(new Set(arr))
-}
-
-export function addUnit(value: string | number) {
-  if (isString(value)) {
-    return value
-  } else if (isNumber(value)) {
-    return `${value}px`
-  }
-  debugWarn(SCOPE, 'binding value must be a string or number')
-  return ''
 }
 
 /**

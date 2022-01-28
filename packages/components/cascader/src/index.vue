@@ -187,8 +187,7 @@ import {
   addResizeListener,
   removeResizeListener,
 } from '@element-plus/utils/resize-event'
-import { isValidComponentSize } from '@element-plus/utils-new'
-import { isKorean } from '@element-plus/utils/isDef'
+import { isValidComponentSize, isKorean } from '@element-plus/utils-new'
 import { CircleClose, Check, ArrowDown } from '@element-plus/icons-vue'
 
 import type { Options } from '@element-plus/components/popper'

@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/ban-types */
 
 import { expectTypeOf } from 'expect-type'
-import { buildProp, definePropType, mutable, keyOf, buildProps } from '../prop'
-import type { propKey } from '../prop'
+import { buildProp, definePropType, mutable, keyOf, buildProps } from '..'
+import type { propKey } from '../vue/prop'
 
 import type { PropType, ExtractPropTypes } from 'vue'
 

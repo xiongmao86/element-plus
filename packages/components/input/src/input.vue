@@ -157,8 +157,7 @@ import {
   useNamespace,
 } from '@element-plus/hooks'
 import { UPDATE_MODEL_EVENT } from '@element-plus/constants'
-import { isObject } from '@element-plus/utils-new'
-import { isKorean } from '@element-plus/utils/isDef'
+import { isObject, isKorean } from '@element-plus/utils-new'
 import { calcTextareaHeight } from './calc-textarea-height'
 import { inputProps, inputEmits } from './input'
 
