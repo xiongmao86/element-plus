@@ -1,7 +1,10 @@
 import { buttonType } from '@element-plus/components/button'
 import { QuestionFilled } from '@element-plus/icons-vue'
-import { buildProps, definePropType } from '@element-plus/utils-new'
-
+import {
+  buildProps,
+  definePropType,
+  iconPropType,
+} from '@element-plus/utils-new'
 import type { Component, ExtractPropTypes } from 'vue'
 
 export const popconfirmProps = buildProps({
@@ -25,8 +28,8 @@ export const popconfirmProps = buildProps({
     default: 'text',
   },
   icon: {
-    type: definePropType<string | Component>([String, Object]),
-    default: QuestionFilled as any,
+    type: iconPropType,
+    default: QuestionFilled as Component,
   },
   iconColor: {
     type: String,

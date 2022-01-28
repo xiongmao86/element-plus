@@ -1,8 +1,13 @@
 import { isString } from '@vue/shared'
-import { buildProps, definePropType, mutable } from '@element-plus/utils-new'
+import {
+  buildProps,
+  definePropType,
+  iconPropType,
+  mutable,
+} from '@element-plus/utils-new'
 import { UPDATE_MODEL_EVENT } from '@element-plus/constants'
 import { useSizeProp } from '@element-plus/hooks'
-import type { StyleValue, ExtractPropTypes, Component } from 'vue'
+import type { StyleValue, ExtractPropTypes } from 'vue'
 
 type AutoSize = { minRows?: number; maxRows?: number } | boolean
 
@@ -53,11 +58,11 @@ export const inputProps = buildProps({
     default: false,
   },
   suffixIcon: {
-    type: definePropType<string | Component>([String, Object]),
+    type: iconPropType,
     default: '',
   },
   prefixIcon: {
-    type: definePropType<string | Component>([String, Object]),
+    type: iconPropType,
     default: '',
   },
   label: {
