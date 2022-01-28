@@ -1,3 +1,4 @@
+export * from './icon'
 export * from './install'
 export * from './prop'
 export * from './style'

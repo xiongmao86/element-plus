@@ -12,7 +12,7 @@ import isEqual from 'lodash/isEqual'
 import lodashDebounce from 'lodash/debounce'
 import { useFormItem, useLocale, useSize } from '@element-plus/hooks'
 import { UPDATE_MODEL_EVENT, CHANGE_EVENT } from '@element-plus/constants'
-import { ValidateComponentsMap } from '@element-plus/utils/icon'
+import { ValidateComponentsMap } from '@element-plus/utils-new'
 import {
   addResizeListener,
   removeResizeListener,
