@@ -156,13 +156,13 @@ import {
   useSize,
   useNamespace,
 } from '@element-plus/hooks'
-import { UPDATE_MODEL_EVENT } from '@element-plus/utils/constants'
-import { isObject } from '@element-plus/utils/util'
+import { UPDATE_MODEL_EVENT } from '@element-plus/constants'
+import { isObject } from '@element-plus/utils-new'
 import { isKorean } from '@element-plus/utils/isDef'
 import { calcTextareaHeight } from './calc-textarea-height'
 import { inputProps, inputEmits } from './input'
 
-import type { StyleValue } from '@element-plus/utils/types'
+import type { StyleValue } from 'vue'
 
 type TargetElement = HTMLInputElement | HTMLTextAreaElement
 

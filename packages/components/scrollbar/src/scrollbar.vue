@@ -43,8 +43,8 @@ import {
   reactive,
 } from 'vue'
 import { useResizeObserver, useEventListener } from '@vueuse/core'
-import { addUnit, isNumber } from '@element-plus/utils/util'
-import { debugWarn } from '@element-plus/utils/error'
+import { isNumber, debugWarn } from '@element-plus/utils-new'
+import { addUnit } from '@element-plus/utils/util'
 import { scrollbarContextKey } from '@element-plus/tokens'
 import Bar from './bar.vue'
 

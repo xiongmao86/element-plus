@@ -1,5 +1,4 @@
-import { buildProps, componentSize } from '@element-plus/utils/props'
-import { isNumber } from '@element-plus/utils/util'
+import { buildProps, componentSize, isNumber } from '@element-plus/utils-new'
 
 export const inputNumberProps = buildProps({
   step: {

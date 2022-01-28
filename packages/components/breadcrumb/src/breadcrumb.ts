@@ -1,4 +1,4 @@
-import { buildProps, definePropType } from '@element-plus/utils/props'
+import { buildProps, definePropType } from '@element-plus/utils-new'
 import type { ExtractPropTypes, Component } from 'vue'
 import type Breadcrumb from './breadcrumb.vue'
 

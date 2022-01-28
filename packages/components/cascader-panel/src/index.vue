@@ -28,14 +28,14 @@ import {
 import isEqual from 'lodash/isEqual'
 import { isClient } from '@vueuse/core'
 import { EVENT_CODE, focusNode, getSibling } from '@element-plus/utils/aria'
-import { UPDATE_MODEL_EVENT, CHANGE_EVENT } from '@element-plus/utils/constants'
+import { UPDATE_MODEL_EVENT, CHANGE_EVENT } from '@element-plus/constants'
 import scrollIntoView from '@element-plus/utils/scroll-into-view'
 import {
   arrayFlat,
   coerceTruthyValueToArray,
   deduplicate,
-  isEmpty,
 } from '@element-plus/utils/util'
+import { isEmpty } from '@element-plus/utils-new'
 
 import ElCascaderMenu from './menu.vue'
 import Store from './store'

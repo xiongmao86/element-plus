@@ -1,8 +1,8 @@
 import { warn } from 'vue'
 import { isObject } from '@vue/shared'
 import fromPairs from 'lodash/fromPairs'
-import type { ExtractPropTypes, PropType } from '@vue/runtime-core'
-import type { Mutable } from './types'
+import type { ExtractPropTypes, PropType } from 'vue'
+import type { Mutable } from './typescript'
 
 const wrapperKey = Symbol()
 export type PropWrapper<T> = { [wrapperKey]: T }

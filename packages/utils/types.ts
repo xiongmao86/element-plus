@@ -1,4 +1,4 @@
-import type { CSSProperties, Plugin } from 'vue'
+import type { Plugin } from 'vue'
 
 type OptionalKeys<T extends Record<string, unknown>> = {
   [K in keyof T]: T extends Record<K, T[K]> ? never : K
@@ -45,9 +45,3 @@ export type Indexable<T> = {
 export type Hash<T> = Indexable<T>
 
 export type TimeoutHandle = number
-
-export type ComponentSize = 'large' | 'default' | 'small'
-
-export type StyleValue = string | CSSProperties | Array<StyleValue>
-
-export type Mutable<T> = { -readonly [P in keyof T]: T[P] }

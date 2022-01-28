@@ -26,7 +26,7 @@
 <script lang="ts">
 import { defineComponent, computed, ref, unref } from 'vue'
 import ElTooltip from '@element-plus/components/tooltip'
-import { isString } from '@element-plus/utils/util'
+import { isString } from '@element-plus/utils-new'
 import { usePopoverProps } from './popover'
 
 import type { StyleValue } from 'vue'

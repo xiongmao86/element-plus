@@ -1,9 +1,9 @@
 import { ref, unref, inject, computed } from 'vue'
 import { elFormItemKey, elFormKey } from '@element-plus/tokens'
-import { buildProp, componentSize } from '@element-plus/utils/props'
+import { buildProp, componentSize } from '@element-plus/utils-new'
 import { useProp } from '../use-prop'
 import { useGlobalConfig } from '../use-global-config'
-import type { ComponentSize } from '@element-plus/utils/types'
+import type { ComponentSize } from '@element-plus/constants'
 import type { MaybeRef } from '@vueuse/core'
 
 export const useSizeProp = buildProp({

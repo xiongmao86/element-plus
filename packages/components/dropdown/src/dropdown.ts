@@ -1,5 +1,5 @@
 import { EVENT_CODE } from '@element-plus/utils/aria'
-import { buildProps, definePropType } from '@element-plus/utils/props'
+import { buildProps, definePropType } from '@element-plus/utils-new'
 import { createCollectionWithScope } from '@element-plus/components/collection'
 import {
   useTooltipTriggerProps,

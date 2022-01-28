@@ -1,6 +1,6 @@
 import { buttonType } from '@element-plus/components/button'
 import { QuestionFilled } from '@element-plus/icons-vue'
-import { buildProps, definePropType } from '@element-plus/utils/props'
+import { buildProps, definePropType } from '@element-plus/utils-new'
 
 import type { Component, ExtractPropTypes } from 'vue'
 

@@ -37,7 +37,7 @@
 import { computed, defineComponent, getCurrentInstance, inject, ref } from 'vue'
 import ElScrollbar from '@element-plus/components/scrollbar'
 import { useLocale } from '@element-plus/hooks'
-import { generateId } from '@element-plus/utils/util'
+import { generateId } from '@element-plus/utils-new'
 import { Loading } from '@element-plus/icons-vue'
 import ElIcon from '@element-plus/components/icon'
 import ElCascaderNode from './node.vue'

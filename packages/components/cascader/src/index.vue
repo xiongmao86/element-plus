@@ -182,12 +182,12 @@ import { ClickOutside as Clickoutside } from '@element-plus/directives'
 import { useLocale, useSize } from '@element-plus/hooks'
 
 import { EVENT_CODE, focusNode, getSibling } from '@element-plus/utils/aria'
-import { UPDATE_MODEL_EVENT, CHANGE_EVENT } from '@element-plus/utils/constants'
+import { UPDATE_MODEL_EVENT, CHANGE_EVENT } from '@element-plus/constants'
 import {
   addResizeListener,
   removeResizeListener,
 } from '@element-plus/utils/resize-event'
-import { isValidComponentSize } from '@element-plus/utils/validators'
+import { isValidComponentSize } from '@element-plus/utils-new'
 import { isKorean } from '@element-plus/utils/isDef'
 import { CircleClose, Check, ArrowDown } from '@element-plus/icons-vue'
 
@@ -199,7 +199,7 @@ import type {
   CascaderNode,
   Tag,
 } from '@element-plus/components/cascader-panel'
-import type { ComponentSize } from '@element-plus/utils/types'
+import type { ComponentSize } from '@element-plus/constants'
 
 type cascaderPanelType = InstanceType<typeof ElCascaderPanel>
 type tooltipType = InstanceType<typeof ElTooltip>

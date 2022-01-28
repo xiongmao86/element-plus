@@ -1,9 +1,8 @@
 import { isString } from '@vue/shared'
-import { buildProps, definePropType, mutable } from '@element-plus/utils/props'
-import { UPDATE_MODEL_EVENT } from '@element-plus/utils/constants'
+import { buildProps, definePropType, mutable } from '@element-plus/utils-new'
+import { UPDATE_MODEL_EVENT } from '@element-plus/constants'
 import { useSizeProp } from '@element-plus/hooks'
-import type { StyleValue } from '@element-plus/utils/types'
-import type { ExtractPropTypes, Component } from 'vue'
+import type { StyleValue, ExtractPropTypes, Component } from 'vue'
 
 type AutoSize = { minRows?: number; maxRows?: number } | boolean
 

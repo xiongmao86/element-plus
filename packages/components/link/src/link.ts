@@ -1,4 +1,4 @@
-import { buildProps, definePropType } from '@element-plus/utils/props'
+import { buildProps, definePropType } from '@element-plus/utils-new'
 import type { Component, ExtractPropTypes } from 'vue'
 import type Link from './link.vue'
 

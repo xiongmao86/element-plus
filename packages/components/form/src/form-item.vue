@@ -54,13 +54,13 @@ import {
 import { NOOP } from '@vue/shared'
 import AsyncValidator from 'async-validator'
 import { addUnit, getPropByPath } from '@element-plus/utils/util'
-import { isValidComponentSize } from '@element-plus/utils/validators'
+import { isValidComponentSize } from '@element-plus/utils-new'
 import { elFormItemKey, elFormKey } from '@element-plus/tokens'
 import { useSize } from '@element-plus/hooks'
 import LabelWrap from './label-wrap'
 
 import type { PropType, CSSProperties } from 'vue'
-import type { ComponentSize } from '@element-plus/utils/types'
+import type { ComponentSize } from '@element-plus/constants'
 import type { ElFormContext, ValidateFieldCallback } from '@element-plus/tokens'
 import type { FormItemRule } from './form.type'
 
