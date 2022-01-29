@@ -11,11 +11,11 @@ import {
   isFragment,
   isValidElementNode,
   buildProps,
-  componentSize,
   definePropType,
   isArray,
   isNumber,
 } from '@element-plus/utils-new'
+import { componentSizes } from '@element-plus/constants'
 import Item from './item.vue'
 import { useSpace } from './use-space'
 
@@ -75,7 +75,7 @@ export const spaceProps = buildProps({
 
   size: {
     type: [String, Array, Number],
-    values: componentSize,
+    values: componentSizes,
     validator: (val: unknown): val is [number, number] | number => {
       return (
         isNumber(val) ||
