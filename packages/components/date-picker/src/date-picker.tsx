@@ -1,4 +1,4 @@
-import { defineComponent, h, provide, ref, renderSlot } from 'vue'
+import { defineComponent, provide, ref, renderSlot } from 'vue'
 import dayjs from 'dayjs'
 import customParseFormat from 'dayjs/plugin/customParseFormat'
 import advancedFormat from 'dayjs/plugin/advancedFormat'
@@ -69,20 +69,21 @@ export default defineComponent({
       const format =
         props.format ??
         (DEFAULT_FORMATS_DATEPICKER[props.type] || DEFAULT_FORMATS_DATE)
-      return h(
-        CommonPicker,
-        {
-          ...props,
-          format,
-          type: props.type,
-          ref: commonPicker,
-          'onUpdate:modelValue': (value) =>
-            ctx.emit('update:modelValue', value),
-        },
-        {
-          default: (scopedProps) => h(getPanel(props.type), scopedProps),
-          'range-separator': () => renderSlot(ctx.slots, 'range-separator'),
-        }
+      return (
+        <CommonPicker
+          {...props}
+          format={format}
+          type={props.type}
+          ref={commonPicker}
+          onUpdate:modelValue={(value) => ctx.emit('update:modelValue', value)}
+          v-slots={{
+            default: (scopedProps) => {
+              const Panel = getPanel(props.type)
+              return <Panel {...scopedProps}></Panel>
+            },
+            'range-separator': () => renderSlot(ctx.slots, 'range-separator'),
+          }}
+        ></CommonPicker>
       )
     }
   },

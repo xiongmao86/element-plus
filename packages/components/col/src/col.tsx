@@ -1,4 +1,4 @@
-import { defineComponent, computed, inject, h, renderSlot } from 'vue'
+import { defineComponent, computed, inject } from 'vue'
 import { buildProps, definePropType, mutable } from '@element-plus/utils/props'
 import type { ExtractPropTypes, CSSProperties } from 'vue'
 
@@ -104,14 +104,10 @@ export default defineComponent({
       return classes
     })
 
-    return () =>
-      h(
-        props.tag,
-        {
-          class: ['el-col', classList.value],
-          style: style.value,
-        },
-        [renderSlot(slots, 'default')]
-      )
+    return () => (
+      <props.tag class={['el-col', classList.value]} style={style.value}>
+        {slots.default?.()}
+      </props.tag>
+    )
   },
 })

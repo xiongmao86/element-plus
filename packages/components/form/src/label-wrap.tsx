@@ -94,17 +94,13 @@ export default defineComponent({
             style[marginPosition] = `${marginWidth}px`
           }
         }
-        return h(
-          'div',
-          {
-            ref: el,
-            class: ['el-form-item__label-wrap'],
-            style,
-          },
-          slots.default?.()
+        return (
+          <div ref={el} class="el-form-item__label-wrap" style={style}>
+            {slots.default?.()}
+          </div>
         )
       } else {
-        return h(Fragment, { ref: el }, slots.default?.())
+        return <Fragment ref={el}>{slots.default?.()}</Fragment>
       }
     }
 

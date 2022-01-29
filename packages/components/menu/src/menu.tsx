@@ -321,6 +321,7 @@ export default defineComponent({
       props.mode === 'horizontal'
         ? withDirectives(vnode, [[Resize, handleResize]])
         : vnode
+
     return () => {
       let slot = slots.default?.() ?? []
       const vShowMore: VNode[] = []
@@ -353,24 +354,18 @@ export default defineComponent({
         if (slotMore?.length && props.ellipsis) {
           slot = slotDefault
           vShowMore.push(
-            h(
-              ElSubMenu,
-              {
-                index: 'sub-menu-more',
-                class: 'el-sub-menu__hide-arrow',
-              },
-              {
-                title: () =>
-                  h(
-                    ElIcon,
-                    {
-                      class: ['el-sub-menu__icon-more'],
-                    },
-                    { default: () => h(More) }
-                  ),
+            <ElSubMenu
+              v-slots={{
+                title: () => (
+                  <ElIcon class="el-sub-menu__icon-more">
+                    <More />
+                  </ElIcon>
+                ),
                 default: () => slotMore,
-              }
-            )
+              }}
+              index="sub-menu-more"
+              class="el-sub-menu__hide-arrow"
+            />
           )
         }
       }

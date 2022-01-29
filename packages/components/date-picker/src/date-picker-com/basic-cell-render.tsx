@@ -1,4 +1,4 @@
-import { h, defineComponent, inject } from 'vue'
+import { defineComponent, inject } from 'vue'
 import { buildProps, definePropType } from '@element-plus/utils/props'
 import { ROOT_PICKER_INJECTION_KEY } from '../date-picker.type'
 import type { DateCell } from '../date-picker.type'
@@ -24,20 +24,10 @@ export default defineComponent({
           return list
         }
       }
-      return h(
-        'div',
-        {
-          class: 'el-date-table-cell',
-        },
-        [
-          h(
-            'span',
-            {
-              class: 'el-date-table-cell__text',
-            },
-            [cell?.text]
-          ),
-        ]
+      return (
+        <div class="el-date-table-cell">
+          <span class="el-date-table-cell__text">{cell?.text}</span>
+        </div>
       )
     }
   },
